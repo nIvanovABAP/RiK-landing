@@ -1,0 +1,208 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: url("img/back.jpg") no-repeat;
+  background-position: left;
+  background-size: cover;
+  border: #02AFED;
+  border-bottom: #1d263a;
+  border-width: 10px;position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+header button{
+    margin-right: 35px;
+}
+
+
+header a {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+
+
+  .header__logo {
+    height: 30px;
+  }
+
+footer {
+    padding: 60px 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer__contacts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__img{
+    height: 32px;
+}
+
+.footer__copyright {
+    opacity: 0.5;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #213053;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #213053;
+}
+
+.about__image {
+  width: 600px;
+}
+
+.about__sun-image {
+  width: 100px;
+  height: 100px;
+}
+
+.about__info {
+  max-width: 550px;
+}
+
+.about h1 {
+  font-size: 70px;
+  line-height: 76px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.about button {
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 20px 25px;
+  margin-top: 20px;
+}
+
+.about span {
+    color: #ff7b00;
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 115px;
+  padding-bottom: 115px;
+  background: url("img/back.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+button {
+  font-family: "Raleway", sans—serif;
+  font-size: 15px;
+  color: #fff;
+  background-color: #ff7b00;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 16px 36px rgb(0 115 130 / 40%);
+  padding: 15px;
+  transition: background-color 0.3s ease-in;
+}
+
+.form__container {
+  width: 550px;
+}
+
+.form {
+  background-color: #1d263a;
+  color: #fff;
+  padding-top: 115px;
+  padding-bottom: 115px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.form h1 {
+  font-size: 48px;
+}
+
+.form p {
+  font-size: 18px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.form form {
+  display: grid;
+}
+
+.form label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.form input,
+.form select {
+  font-size: 18px;
+  color: #213053;
+  height: 60px;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+.form__submit {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+select {
+  appearance: none;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+.footer__group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__group span{
+    color: #ff7b00;
+    font-weight: 1000;
+}
+
+.footer__group h4{
+    font-size: larger;
+}
+
+button:hover {
+  background-color: #00C322;
+  box-shadow: 0 16px 36px rgba(152 246 12 / 20%);
+}
