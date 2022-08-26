@@ -17,6 +17,9 @@ header button{
     margin-right: 35px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 header a {
     font-size: 16px;
@@ -63,26 +66,35 @@ a {
   color: #213053;
 }
 
-.about__image {
-  width: 600px;
+.about__images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
 }
 
-.about__sun-image {
-  width: 100px;
-  height: 100px;
+.about img{
+  width: 100%;
 }
 
 .about__info {
-  max-width: 550px;
+  width: 40vw;
+}
+
+.about__images label{
+  margin-top: -10px;
+  padding-left: 2vw;
+  font-size: 1.6vw;
+  font-weight: 700;
 }
 
 .about h1 {
-  font-size: 70px;
+  font-size: 5vw;
   line-height: 76px;
 }
 
 .about p {
-  font-size: 18px;
+  font-size: 1.5vw;
   line-height: 30px;
 }
 
@@ -101,11 +113,12 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 115px;
-  padding-bottom: 115px;
   background: url("img/back.jpg") no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  height: 80vh;
 }
 
 button {
@@ -128,11 +141,12 @@ button {
 .form {
   background-color: #1d263a;
   color: #fff;
-  padding-top: 115px;
-  padding-bottom: 115px;
   text-align: center;
   display: flex;
   justify-content: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  height: 90vh;
 }
 
 .form h1 {
@@ -191,6 +205,7 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .footer__group span{
