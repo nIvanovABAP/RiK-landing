@@ -28,6 +28,6 @@ function showSlides(n, firstFlag) {
     i = n+1;
 
   if (firstFlag)
-    setTimeout(showSlides, 4000, i); 
-    
+    setTimeout(showSlides, 4000, i, true); 
+
 }
