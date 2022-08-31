@@ -1,5 +1,5 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex, true);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -11,7 +11,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n, firstFlag) {
   var i;
   var slides = document.getElementsByClassName('about_images');
   slideIndex = n;
@@ -27,5 +27,7 @@ function showSlides(n) {
   else
     i = n+1;
 
-  setTimeout(showSlides, 4000, i); 
+  if (firstFlag)
+    setTimeout(showSlides, 4000, i); 
+    
 }
