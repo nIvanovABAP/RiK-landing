@@ -11,12 +11,12 @@ header {
   border-width: 10px;
   position: sticky; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  width: 100vw; /* Full width */
   z-index: 1;
 }
 
 header button{
-    margin-right: 35px;
+    margin-right: 55px;
 }
 
 html {
@@ -69,12 +69,13 @@ a {
   color: #213053;
 }
 
-.about__images {
+.about_images {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40vw;
+  width: 30vw;
   padding-top: 10vh;
+  position: relative;
 }
 
 .about img{
@@ -85,12 +86,12 @@ a {
   width: 40vw;
 }
 
-.about__images label{
+.about_images label{
   padding-left: 2vw;
   font-size: 1.6vw;
   font-weight: 700;
-  position: relative;
-  bottom: 38vw;
+  position: absolute;
+  bottom: 0;
 }
 
 .about h1 {
@@ -226,6 +227,53 @@ button:hover {
   box-shadow: 0 16px 36px rgba(152 246 12 / 20%);
 }
 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.9s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}
+
+.about__slide_container {  
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 40%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: white;
+  color: black;
+}
+
 @media (max-width: 75vh){
 
   .about {
@@ -237,7 +285,7 @@ button:hover {
     width: 80vw;
   }
   
-  .about__images {
+  .about_images {
     padding-top: 4vh;
     width: 90vw;
     flex-direction: column-reverse;
@@ -248,14 +296,14 @@ button:hover {
     line-height: 5vh;
   }
 
-  .about__images label{
+  .about_images label{
     font-size: 1.8vh;
     position: inherit;
   }
 
   .about p {
-    font-size: 1.5vh;
-    line-height: 40px;
+    font-size: 1.9vh;
+    line-height: 1.9vh;
   }
 
   .about button {
@@ -297,7 +345,7 @@ button:hover {
 
 }
 
-@media (max-height: 60vw) and (min-height: 18vw){
+@media (max-height: 40vw) and (min-height: 18vw){
 
   .about {
     width: 103.7vw;
@@ -311,7 +359,7 @@ button:hover {
     width: 80vh;
   }
 
-  .about__images {
+  .about_images {
     padding-top: 4vh;
     width: 80vh;
   }
@@ -322,7 +370,7 @@ button:hover {
     margin: 5px;
   }
 
-  .about__images label{
+  .about_images label{
     bottom: 75vh;
   }
 

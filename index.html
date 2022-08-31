@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo_mini.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body>    
     <header>
         <img class="header__logo" src="img/logo.png">
         <div class="header__controls">
@@ -25,9 +26,27 @@
             <button>Узнать подробнее</button>
         </div>
 
-        <div class="about__images">
+        <div class="about__slide_container">            
+            <div class="about_images fade">
                 <img id="party" class="about__party" src="img/games.png">
                 <label for="party">Игры для компаний и вечеринок</label>
+            </div>
+
+                       
+            <div class="about_images fade">
+                <img id="classic" class="about__classic" src="img/games_classic.png">
+                <label for="classic">Классические игры</label>
+            </div>
+
+            <div class="about_images fade">
+                <img id="logical" class="about__logical" src="img/games_logical.png">
+                <label for="logical">Логические игры</label>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <script src="slider.js"></script>
         </div>
 
     </section>
