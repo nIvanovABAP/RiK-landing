@@ -8,9 +8,11 @@ header {
   background-size: cover;
   border: #02AFED;
   border-bottom: #1d263a;
-  border-width: 10px;position: fixed; /* Set the navbar to fixed position */
+  border-width: 10px;
+  position: sticky; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  z-index: 1;
 }
 
 header button{
@@ -59,6 +61,7 @@ body {
   font-family: "Raleway", sans-serif;
   color: #213053;
   margin: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -71,7 +74,6 @@ a {
   flex-direction: column;
   align-items: center;
   width: 40vw;
-  height: 90vh;
   padding-top: 10vh;
 }
 
@@ -81,17 +83,14 @@ a {
 
 .about__info {
   width: 40vw;
-  height: 90vh;
-  padding-top: 10vh;
 }
 
 .about__images label{
-  margin-top: -10px;
   padding-left: 2vw;
   font-size: 1.6vw;
   font-weight: 700;
   position: relative;
-  top: 0%;
+  bottom: 38vw;
 }
 
 .about h1 {
@@ -122,9 +121,8 @@ a {
   background: url("img/back.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 10vh;
   padding-bottom: 10vh;
-  height: 80vh;
+  width: 100%;
 }
 
 button {
@@ -152,7 +150,6 @@ button {
   justify-content: center;
   padding-top: 10vh;
   padding-bottom: 10vh;
-  height: 90vh;
 }
 
 .form h1 {
@@ -226,4 +223,43 @@ input {
 button:hover {
   background-color: #00C322;
   box-shadow: 0 16px 36px rgba(152 246 12 / 20%);
+}
+
+@media (max-width: 66vh){
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about__info {
+    width: 80vw;
+  }
+  
+  .about__images {
+    padding-top: 4vh;
+    width: 90vw;
+  }
+
+  .about h1 {
+    font-size: 4vh;
+    line-height: 5vh;
+  }
+
+  .about__images label{
+    font-size: 1.8vh;
+    bottom: 40vh;
+  }
+
+  .about p {
+    font-size: 1.5vh;
+    line-height: 40px;
+  }
+
+  .about button {
+    font-size: 6vw;
+    border-radius: 20px;
+    padding: 4vw 5vw;
+    margin-top: 20px;
+  }
+
 }
