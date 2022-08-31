@@ -122,7 +122,7 @@ a {
   background-position: center;
   background-size: cover;
   padding-bottom: 10vh;
-  width: 100%;
+  width: 103.5vw;
 }
 
 button {
@@ -150,6 +150,7 @@ button {
   justify-content: center;
   padding-top: 10vh;
   padding-bottom: 10vh;
+  width: 103.5vw;
 }
 
 .form h1 {
@@ -225,10 +226,11 @@ button:hover {
   box-shadow: 0 16px 36px rgba(152 246 12 / 20%);
 }
 
-@media (max-width: 66vh){
+@media (max-width: 75vh){
 
   .about {
     flex-direction: column-reverse;
+    width: 103.6vw;
   }
 
   .about__info {
@@ -238,6 +240,7 @@ button:hover {
   .about__images {
     padding-top: 4vh;
     width: 90vw;
+    flex-direction: column-reverse;
   }
 
   .about h1 {
@@ -247,7 +250,7 @@ button:hover {
 
   .about__images label{
     font-size: 1.8vh;
-    bottom: 40vh;
+    position: inherit;
   }
 
   .about p {
@@ -260,6 +263,79 @@ button:hover {
     border-radius: 20px;
     padding: 4vw 5vw;
     margin-top: 20px;
+  }
+
+  .form__container {
+    width: 90vw;
+  }
+
+  .form input,
+.form select {
+  font-size: 1.3vh;
+  height: 4vh;
+}
+
+.form__submit {
+  font-size: 1.3vh;  
+  height: 4vh;
+  margin-top: 40px;
+}
+
+.form label {
+  font-size: 1.4vh;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.form p {
+  font-size: 1.5vh;
+}
+
+.form {  
+  width: 103.6vw;
+}
+
+}
+
+@media (max-height: 60vw) and (min-height: 18vw){
+
+  .about {
+    width: 103.7vw;
+  }
+
+  .form {  
+    width: 103.7vw;
+  }
+
+  .about__info {
+    width: 80vh;
+  }
+
+  .about__images {
+    padding-top: 4vh;
+    width: 80vh;
+  }
+
+  .about h1 {
+    font-size: 9vh;
+    line-height: 7vh;
+    margin: 5px;
+  }
+
+  .about__images label{
+    bottom: 75vh;
+  }
+
+  .about p {
+    font-size: 4vh;
+    margin: 5px;
+  }
+
+  .about button {
+    font-size: 4vh;
+    border-radius: 20px;
+    padding: 2vw 2vw;
+    margin: 5px;
   }
 
 }
