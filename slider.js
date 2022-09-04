@@ -3,17 +3,17 @@ showSlides(slideIndex, true);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(n);
+  showSlides(slideIndex + n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides(n);
 }
 
 function showSlides(n, firstFlag) {
   var i;
-  var slides = document.getElementsByClassName('about_images');
+  var slides = document.getElementsByClassName("about_images");
   slideIndex = n;
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}

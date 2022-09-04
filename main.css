@@ -163,10 +163,19 @@ button {
 }
 
 .form__group {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
+}
+
+.form__group a{
+  display: none;
+  color: white;
+  background-color: red;
+  position: absolute;
+  bottom: 5%
 }
 
 .form form {
@@ -181,9 +190,9 @@ button {
 
 .form input,
 .form select {
-  font-size: 18px;
+  font-size: 16px;
   color: #213053;
-  height: 60px;
+  height: 50px;
   padding: 0px 20px;
   margin-bottom: 10px;
   border-radius: 15px;
@@ -292,8 +301,8 @@ button:hover {
   }
 
   .about h1 {
-    font-size: 4vh;
-    line-height: 5vh;
+    font-size: 10vw;
+    line-height: 10vw;
   }
 
   .about_images label{

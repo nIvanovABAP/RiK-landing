@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo_mini.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <script src="form.js"></script>
 </head>
 
 <body>    
@@ -14,7 +15,7 @@
         <img class="header__logo" src="img/logo.png">
         <div class="header__controls">
             <a href="#contacts">Контакты</a>
-            <button>Заказать</button>
+            <a href="#form"><button>Заказать</button></a>
         </div>
     </header>
 
@@ -23,7 +24,7 @@
         <div class="about__info">
             <h1>Магазин настольных игр <span>Ром и Кости</span></h1>
             <p>Большой выбор настольных игр для всей семьи и на любой вкус. Развлечения для взрослых. Развитие для детей. Незабываемые эмоции</p>
-            <button>Узнать подробнее</button>
+            <a href="#form"><button>Узнать подробнее</button></a>
         </div>
 
         <div class="about__slide_container">            
@@ -51,7 +52,7 @@
 
     </section>
 
-    <section class="form">
+    <section class="form" id="form">
 
         <div class="form__container">
             <h1>Оставьте свои контакты</h1>
@@ -60,31 +61,43 @@
             <form>
                 <div class="form__group">
                     <label for="name">Ваше имя</label>
-                    <input type="text" placeholder="Введите имя" id="name">
+                    <input class="form__element" type="text" placeholder="Введите имя" id="name" required>
                 </div>
 
                 <div class="form__group">
                     <label for="mail">Электронный адрес</label>
-                    <input type="mail" placeholder="***@yandex.ru" id="email">
+                    <input type="email" class="form__element"  placeholder="***@yandex.ru" id="email" required>
                 </div>
 
                 <div class="form__group">
                     <label for="phone">Телефон</label>
-                    <input type="tel" placeholder="7 (999) 999 99 99" id="phone">
+                    <a href="#form" >Введите 10 цифр телефона с 9. Пример: 9991234567</a>
+                    <input type="tel" class="form__element" placeholder="7 (999) 999 99 99" id="phone" required>
                 </div>
 
                 <div class="form__group">
                     <label for="budget">Какая игра интересует?</label>
-                    <select id="budget" placeholder="Выберите вариант">
-                        <option>Выберите вариант</option>
-                        <option value="party">Для вечеринки</option>
-                        <option value="family">Семейная</option>
-                        <option value="child">Детская</option>
-                        <option value="learn">Развивающая</option>
+                    <select class="form__element" id="budget" placeholder="Выберите вариант" required>
+                        <option value="">Выберите вариант:</option>
+                        <option value="party">- Для вечеринки</option>
+                        <option value="family">- Семейная</option>
+                        <option value="child">- Детская</option>
+                        <option value="learn">- Развивающая</option>
                     </select>
                 </div>
 
-                <button type="submit" class="form__submit">Отправить заявку</button>
+                <div class="form__group">
+                    <label for="msgSource">Как с Вами связаться?</label>
+                    <select class="form__element" id="msgSource" placeholder="Выберите вариант" required>
+                        <option value="">Выберите вариант:</option>
+                        <option value="call">- Позвонить</option>
+                        <option value="email">- Письмом на почту</option>
+                        <option value="telegram">- Telegram</option>
+                        <option value="whatsapp">- Whatsapp</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="form__submit" onclick="sendForm()">Отправить заявку</button>
 
             </form>
 
@@ -93,7 +106,7 @@
     </section>
 
     <footer>
-        <div class="footer__contacts">
+        <div class="footer__contacts" id="contacts">
 
             <div class="footer__group">
                 <h3>Позвонить нам:</h3>
@@ -107,7 +120,7 @@
                 <div class="footer_links">
                     <a href="https://vk.com/kostik_i" target="_blank"><img class="footer__img" src="img/VK.svg"></a>
                     <a href="https://t.me/simpleinvest20" target="_blank"><img class="footer__img" src="img/TG.svg"></a>
-                    <a href="http://www.youtube.com/channel/UCIeEeGpnk345XVs9YFfVtLw" target="_blank"><img class="footer__img" src="img/YT.png"></a>
+                    <img class="footer__img" src="img/Whatsapp.png">
                 </div>
             </div>
 
