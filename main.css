@@ -310,6 +310,18 @@ button:hover {
     position: inherit;
   }
 
+  .form__group a{
+    display: none;
+    color: white;
+    background-color: red;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    height: 30%;
+    font-size: 70%;
+    border-radius: 4%;
+  }
+
   .about p {
     font-size: 1.9vh;
     line-height: 1.9vh;

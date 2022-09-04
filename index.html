@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo_mini.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <script src="form.js"></script>
 </head>
 
 <body>    
@@ -66,13 +65,14 @@
 
                 <div class="form__group">
                     <label for="mail">Электронный адрес</label>
-                    <input type="email" class="form__element"  placeholder="***@yandex.ru" id="email" required>
+                    <a href="#form" >Введите почту в формате xxx@xx.xx. Пример: example@mail.ru</a>
+                    <input class="form__element"  placeholder="***@yandex.ru" id="email" required oninput="hideError(this)">
                 </div>
 
                 <div class="form__group">
                     <label for="phone">Телефон</label>
-                    <a href="#form" >Введите 10 цифр телефона с 9. Пример: 9991234567</a>
-                    <input type="tel" class="form__element" placeholder="7 (999) 999 99 99" id="phone" required>
+                    <a href="#form" >Введите номер полностью</a>
+                    <input type="tel" class="form__element" placeholder="+7 (999) 999 99 99" id="phone" required oninput="hideError(this)" onkeypress='validate(event)'>
                 </div>
 
                 <div class="form__group">
@@ -98,6 +98,7 @@
                 </div>
 
                 <button type="submit" class="form__submit" onclick="sendForm()">Отправить заявку</button>
+                <script src="form.js"></script>
 
             </form>
 
