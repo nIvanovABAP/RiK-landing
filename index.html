@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo_mini.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <script src="jqery.js"></script>
 </head>
 
 <body>    
@@ -78,11 +79,11 @@
                 <div class="form__group">
                     <label for="budget">Какая игра интересует?</label>
                     <select class="form__element" id="budget" placeholder="Выберите вариант" required>
-                        <option value="">Выберите вариант:</option>
-                        <option value="party">- Для вечеринки</option>
-                        <option value="family">- Семейная</option>
-                        <option value="child">- Детская</option>
-                        <option value="learn">- Развивающая</option>
+                        <option value="" id="">Выберите вариант:</option>
+                        <option value="party" id="party">- Для вечеринки</option>
+                        <option value="family" id="family">- Семейная</option>
+                        <option value="child" id="child">- Детская</option>
+                        <option value="learn" id="learn">- Развивающая</option>
                     </select>
                 </div>
 
@@ -90,10 +91,10 @@
                     <label for="msgSource">Как с Вами связаться?</label>
                     <select class="form__element" id="msgSource" placeholder="Выберите вариант" required>
                         <option value="">Выберите вариант:</option>
-                        <option value="call">- Позвонить</option>
-                        <option value="email">- Письмом на почту</option>
-                        <option value="telegram">- Telegram</option>
-                        <option value="whatsapp">- Whatsapp</option>
+                        <option value="call" id="call">- Позвонить</option>
+                        <option value="email" id="email">- Письмом на почту</option>
+                        <option value="telegram" id="value">- Telegram</option>
+                        <option value="whatsapp" id="whatsapp">- Whatsapp</option>
                     </select>
                 </div>
 
@@ -112,7 +113,7 @@
             <div class="footer__group">
                 <h3>Позвонить нам:</h3>
                 <div class="footer_links">
-                    <a href="tel:79999999999">+7 (999) 999-99-99</a>
+                    <a href="tel:79999999999">+7 (977) 836-10-50</a>
                 </div>
             </div>
 
@@ -121,7 +122,7 @@
                 <div class="footer_links">
                     <a href="https://vk.com/kostik_i" target="_blank"><img class="footer__img" src="img/VK.svg"></a>
                     <a href="https://t.me/simpleinvest20" target="_blank"><img class="footer__img" src="img/TG.svg"></a>
-                    <img class="footer__img" src="img/Whatsapp.png">
+                    <a href="https://wa.me/79778361050"><img class="footer__img" src="img/Whatsapp.png"></a>
                 </div>
             </div>
 

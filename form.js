@@ -42,22 +42,26 @@ function checkElements(elem){
   }
 
   function sendToTelegram(token,text,chatid){
+    var message = text; //encodeURIComponent(text);
     var z=$.ajax({  
     type: "POST",  
     url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid,
-    data: "parse_mode=HTML&text="+encodeURIComponent(text), 
+    data: "parse_mode=HTML&text=" + message, 
     }); 
    };
   
   //Отправка формы
 function sendForm() {
-    let i;
+    let i, j;
     let formElements = document.getElementsByClassName("form__element");
+    let msgText;
+    let customerPhone, customerEmail, customerName, budget, nsgSource;    
+    let budjetOptions, msgSourceOptions;
 
     goToPage("#form");
 
     for (i = 0; i < formElements.length; i++){
-
+        
         if (formElements[i].required)
             if (formElements[i].value == "")
                 return;
@@ -65,9 +69,40 @@ function sendForm() {
         if (!checkElements(formElements[i]))
         return;
 
+        switch (formElements[i].id){
+            case "phone":
+                customerPhone = formElements[i].value;
+                break;
+            case "email":
+                customerEmail = formElements[i].value;
+                break;
+            case "name":
+                customerName = formElements[i].value;
+                break;
+            case "budget":
+                budjetOptions = formElements[i].childNodes
+
+                for (j = 0; j < budjetOptions.length; j++){
+                    if (budjetOptions[j].id == formElements[i].value){
+                        budget = budjetOptions[j].firstChild.data;
+                        break
+                    }
+                }
+
+                break;
+            case "msgSource":
+                break;
+        }
+
     }
 
-    sendToTelegram("5317077070:AAGLb3J1c_0KD5MHLxPR_0jOO50pHoXOCHE", "-1001697784717", "-1001697784717");
+    msgText = `Заполнена форма на сайте:
+    Имя: ${customerName}
+    Электронная почта: ${customerEmail}
+    Телефон: ${customerPhone}
+    Категория игры: ${budget}`;
+    
+    sendToTelegram("5317077070:AAGLb3J1c_0KD5MHLxPR_0jOO50pHoXOCHE", msgText, "-1001697784717");
 
 }
 
