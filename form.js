@@ -55,7 +55,7 @@ function sendForm() {
     let i, j;
     let formElements = document.getElementsByClassName("form__element");
     let msgText;
-    let customerPhone, customerEmail, customerName, budget, nsgSource;    
+    let customerPhone, customerEmail, customerName, budget, msgSource;    
     let budjetOptions, msgSourceOptions;
 
     goToPage("#form");
@@ -91,6 +91,14 @@ function sendForm() {
 
                 break;
             case "msgSource":
+                msgSourceOptions = formElements[i].childNodes
+
+                for (j = 0; j < msgSourceOptions.length; j++){
+                    if (msgSourceOptions[j].id == formElements[i].value){
+                        msgSource = msgSourceOptions[j].firstChild.data;
+                        break
+                    }
+                }
                 break;
         }
 
@@ -100,7 +108,8 @@ function sendForm() {
     Имя: ${customerName}
     Электронная почта: ${customerEmail}
     Телефон: ${customerPhone}
-    Категория игры: ${budget}`;
+    Категория игры: ${budget}
+    Способ связи ${msgSource}`;
     
     sendToTelegram("5317077070:AAGLb3J1c_0KD5MHLxPR_0jOO50pHoXOCHE", msgText, "-1001697784717");
 
