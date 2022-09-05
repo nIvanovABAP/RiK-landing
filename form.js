@@ -40,6 +40,14 @@ function checkElements(elem){
 
     return true;
   }
+
+  function sendToTelegram(token,text,chatid){
+    var z=$.ajax({  
+    type: "POST",  
+    url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid,
+    data: "parse_mode=HTML&text="+encodeURIComponent(text), 
+    }); 
+   };
   
   //Отправка формы
 function sendForm() {
@@ -59,7 +67,7 @@ function sendForm() {
 
     }
 
-    alert('все поля верно заполнены')
+    sendToTelegram("5317077070:AAGLb3J1c_0KD5MHLxPR_0jOO50pHoXOCHE", "-1001697784717", "-1001697784717");
 
 }
 
